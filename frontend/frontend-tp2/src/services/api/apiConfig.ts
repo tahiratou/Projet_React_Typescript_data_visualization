@@ -15,6 +15,22 @@ if (import.meta.env.PROD && API_BASE_URL.includes('127.0.0.1')) {
   console.error('❌ Vérifiez que VITE_API_URL est configurée sur Vercel');
 }
 
+export const API_ENDPOINTS = {
+  // Authentification
+  auth: {
+    login: '/api/users/login/',
+    register: '/api/users/inscription/',
+  },
+  // Datasets (REST API)
+  datasets: {
+    list: '/api/donnees/datasets/',
+    detail: (id: number) => `/api/donnees/datasets/${id}/`,
+  },
+  // GraphQL
+  graphql: '/api/graphql/',
+  // Stats
+  stats: '/api/datasets/admin/recup_donnee/dataset/stats/',
+};
 // Créer une instance Axios avec configuration de base
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
