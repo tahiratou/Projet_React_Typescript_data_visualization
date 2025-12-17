@@ -8,6 +8,11 @@ python manage.py makemigrations --noinput
 python manage.py migrate --noinput
 echo " Importing data..."
 python - <<'PYCODE'
+python manage.py shell <<EOF
+import os
+import django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "gestion_donnee.settings")
+django.setup()
 from recup_donnee.services.MesServices import ImportateurDatasets
 try:
     importateur = ImportateurDatasets()
