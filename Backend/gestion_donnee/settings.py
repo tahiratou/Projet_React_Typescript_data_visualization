@@ -24,7 +24,7 @@ DEBUG = os.environ.get("DEBUG", "True") == "True"
 SECRET_KEY = 'django-insecure-*m92$s_h&u99xn-(*d6e+b)521gez7*6y31$y)rxitg6$^e(o9'
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
-CSRF_TRUSTED_ORIGINS = ["https://gestion_donnee.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://tech-inforoute-projet1.onrender.com/"]
 
 
 
