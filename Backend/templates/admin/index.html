@@ -1,0 +1,19 @@
+{% extends "admin/index.html" %}
+{% load static %}
+
+{% block content %}
+    {{ block.super }}  {# Garde le contenu original du tableau de bord #}
+
+    <div style="margin-top: 40px;">
+        <h2>Statistiques OGSL</h2>
+        <p>Consultez les statistiques des jeux de données, contacts et publications.</p>
+        <a href="{% url 'admin:dataset-stats' %}" class="button" 
+           style="background-color:#2196F3;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;">
+           Voir les statistiques
+        </a>
+    </div>
+    
+{% endblock %}
+
+
+

@@ -1,0 +1,4 @@
+/* Masquer le bloc Recent Actions dans Jazzmin */
+#recent-actions {
+    display: none !important;
+}

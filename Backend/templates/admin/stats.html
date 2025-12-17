@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+</div class="container">
+    <div class="text-center mb-5">
+        <h1>Statistiques des jeu de données</h1>
+    </div>
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <div style="flex: 1 1 200px; padding: 20px; background-color: #4CAF50; color: white; border-radius: 8px; text-align: center;">
+            <h2>{{ total_datasets }}</h2>
+            <p>Total Datasets</p>
+        </div>
+
+        <div style="flex: 1 1 200px; padding: 20px; background-color: #2196F3; color: white; border-radius: 8px; text-align: center;">
+            <h2>{{ total_contacts }}</h2>
+            <p>Total Contacts</p>
+        </div>
+
+        <div style="flex: 1 1 200px; padding: 20px; background-color: #FF9800; color: white; border-radius: 8px; text-align: center;">
+            <h2>{{ total_publications }}</h2>
+            <p>Total Publications</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'frontend/base.html' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">  
+    <a class="navbar-brand ms-4" href="/">
+      <i class="fa fa-database"></i> OGSL
+    </a>
+
+    <div class="navbar me-3">
+        <a class="btn btn-outline-light btn-sm d-flex justify-content-center align-items-center" href="{% url 'connexion' %}">
+          <i class="fa fa-sign-in-alt me-1 mt-1"></i> Connexion</a>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="page-center" style="min-height:80vh; display:flex; justify-content:center; align-items:center;">
+  <div class="card shadow-sm" style="max-width:400px; width:100%; padding:25px;">
+    <h4 class="text-center mb-4">Inscription</h4>
+    <form method="post" action="{% url 'inscription' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Nom d'utilisateur</label>
+            <input type="text" name="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Adresse courriel</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mot de passe</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-small">
+                <i class="fa fa-check"></i> Créer un compte
+            </button>
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}
